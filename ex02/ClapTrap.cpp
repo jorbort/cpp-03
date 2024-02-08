@@ -1,4 +1,4 @@
-#include "ClapTrap.hpp"
+#include "ClapTrap.HPP"
 
 ClapTrap::ClapTrap()
 {
@@ -18,6 +18,14 @@ ClapTrap::ClapTrap(const ClapTrap &clap)
 {
 	this->name = clap.getName();
 	std::cout << this->getName() << " was created using copy constructor" << std::endl;
+}
+ClapTrap	&ClapTrap::operator=(ClapTrap const &clap)
+{
+	this->name = clap.name;
+	this->AttackDamage = clap.AttackDamage;
+	this->EnergyPoints = clap.EnergyPoints;
+	this->HealthPoints = clap.HealthPoints;
+	return (*this);
 }
 
 ClapTrap::~ClapTrap()
@@ -42,6 +50,26 @@ int ClapTrap::getHealth()
 int ClapTrap::getAttack()
 {
 	return (this->AttackDamage);
+}
+
+void ClapTrap::setAttack(int value)
+{
+	this->AttackDamage = value;
+}
+
+void ClapTrap::setEnergy(int value)
+{
+	this->EnergyPoints = value;
+}
+
+void ClapTrap::setHealth(int value)
+{
+	this->HealthPoints = value;
+}
+
+void ClapTrap::setName(std::string &name)
+{
+	this->name = name;
 }
 
 void ClapTrap::attack(const std::string &target)
