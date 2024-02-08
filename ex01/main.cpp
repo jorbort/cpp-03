@@ -1,4 +1,4 @@
-#include "ClapTrap.HPP"
+#include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
 int main(void)
@@ -8,4 +8,5 @@ int main(void)
 	scrapy.attack("enemy");
 	scrapy.takeDamage(15);
 	scrapy.beRepaired(10);
+	scrapy.guardGate();
 }
