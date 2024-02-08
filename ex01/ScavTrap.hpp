@@ -3,18 +3,15 @@
 
 #include "ClapTrap.HPP"
 
-class ScavTrap
+class ScavTrap : public ClapTrap
 {
-private:
-	std::string name;
-	int hitPoints;
-	int energyPoints;
-	int attackDamage;
-public:
-	ScavTrap();
-	ScavTrap(const ScavTrap &scav);
-	~ScavTrap();
-	void guardGate();
+	private:
+	public:
+		ScavTrap();
+		ScavTrap(std::string name);
+		ScavTrap(const ScavTrap &scav);
+		~ScavTrap();
+		void guardGate();
 };
 
 #endif

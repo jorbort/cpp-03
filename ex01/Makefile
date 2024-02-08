@@ -1,9 +1,9 @@
-NAME = ClapTrap
+NAME = ScavTrap
 CFLAG = -Wall -Werror -Wextra -g -std=c++98 -fsanitize=address
-SRC = main.cpp ClapTrap.cpp 
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp 
 CC = c++
 OBJS = $(SRC:.cpp=.o)
-HEADER = ClapTrap.hpp
+HEADER = ClapTrap.hpp ScavTrap.hpp
 
 %.o: %.cpp
 	$(CC) -I. $(CFLAG) -c $< -o $@

@@ -82,10 +82,6 @@ void ClapTrap::beRepaired(unsigned int amount)
 		std::cout << this->getName() << " is dead thus it cannot do anything" << std::endl;
 		return ;
 	}
-	else if (this->getHealth() >= 10)
-	{
-		std::cout << this->name << " is fully healed" << std::endl;
-	}
 	else if (this->getHealth() < 10 && this->getHealth() + (int)amount > 10)
 	{
 		std::cout << this->getName() << " was healed for " <<  10 - this->getHealth() << std::endl;
