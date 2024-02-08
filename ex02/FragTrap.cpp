@@ -12,6 +12,7 @@ FragTrap::FragTrap(std::string name)
 	this->setEnergy(100);
 	this->setHealth(100);
 	this->setAttack(30);
+	std::cout << "string constructor called on frag" << std::endl; 
 }
 
 FragTrap &FragTrap::operator=(FragTrap const &frag)
@@ -26,6 +27,7 @@ FragTrap &FragTrap::operator=(FragTrap const &frag)
 
 FragTrap::~FragTrap()
 {
+	std::cout << "frag was destroyed" << std::endl;
 }
 
 void FragTrap::highFiveGuys(void)
@@ -35,5 +37,5 @@ void FragTrap::highFiveGuys(void)
 
 void FragTrap::attack(std::string target)
 {
-	std::cout << this->getName() << " frag attacked " << target << std::endl;
+	std::cout << this->getName() << " frag attacked " << target << " dealing " << this->getAttack() << std::endl;
 }
