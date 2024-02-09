@@ -21,6 +21,7 @@ ScavTrap::ScavTrap(std::string trap)
 ScavTrap::ScavTrap(const ScavTrap &scav)
 {
 	*this = scav;
+	std::cout << "scav copy constructor called" << std::endl;
 }
 
 ScavTrap &ScavTrap::operator=(ScavTrap const &scav)
@@ -29,6 +30,7 @@ ScavTrap &ScavTrap::operator=(ScavTrap const &scav)
 	this->AttackDamage  = scav.AttackDamage;
 	this->EnergyPoints = scav.EnergyPoints;
 	this->HealthPoints = scav.HealthPoints;
+	std::cout << "scav assignment operator constructor called" << std::endl;
 	return (*this);
 }
 

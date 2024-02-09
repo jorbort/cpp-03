@@ -14,7 +14,6 @@ ClapTrap::ClapTrap(std::string name)
 	this->setEnergy(10);
 	this->setHealth(10);
 	this->setAttack(0);
-
 	std::cout << this->getName() << " was created using string parameter constructor" << std::endl;
 }
 
