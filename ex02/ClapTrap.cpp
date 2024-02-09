@@ -3,6 +3,10 @@
 ClapTrap::ClapTrap()
 {
 	std::cout << "default constructor called" << std::endl;
+	this->name = "";
+	this->AttackDamage = 0;
+	this->HealthPoints = 10;
+	this->EnergyPoints = 10;
 }
 ClapTrap::ClapTrap(std::string name)
 {
@@ -16,7 +20,7 @@ ClapTrap::ClapTrap(std::string name)
 
 ClapTrap::ClapTrap(const ClapTrap &clap)
 {
-	this->name = clap.getName();
+	*this = clap;
 	std::cout << this->getName() << " was created using copy constructor" << std::endl;
 }
 ClapTrap	&ClapTrap::operator=(ClapTrap const &clap)
@@ -25,7 +29,9 @@ ClapTrap	&ClapTrap::operator=(ClapTrap const &clap)
 	this->AttackDamage = clap.AttackDamage;
 	this->EnergyPoints = clap.EnergyPoints;
 	this->HealthPoints = clap.HealthPoints;
+	std::cout << this->getName() << " was created using assignment constructor" << std::endl;
 	return (*this);
+
 }
 
 ClapTrap::~ClapTrap()

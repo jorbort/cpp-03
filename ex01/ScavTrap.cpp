@@ -2,7 +2,11 @@
 
 ScavTrap::ScavTrap()
 {
-	std::cout << "default constructor called" << std::endl;
+	std::cout << "scav default constructor called" << std::endl;
+	name = ""; 
+	HealthPoints = 100;
+	EnergyPoints = 50;
+	AttackDamage = 20;
 }
 
 ScavTrap::ScavTrap(std::string trap)
@@ -12,6 +16,11 @@ ScavTrap::ScavTrap(std::string trap)
 	EnergyPoints = 50;
 	AttackDamage = 20;
 	std::cout << "scavtrap constructor called" << std::endl;
+}
+
+ScavTrap::ScavTrap(const ScavTrap &scav)
+{
+	*this = scav;
 }
 
 ScavTrap &ScavTrap::operator=(ScavTrap const &scav)

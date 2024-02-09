@@ -9,6 +9,6 @@ int main(void)
 	trapi.beRepaired(5);
 	trapi.beRepaired(2);
 	trapi.takeDamage(10);
-	trapi.attack("enemy");
+	trapi.attack("other enemy");
 	trapi.beRepaired(2);
 }

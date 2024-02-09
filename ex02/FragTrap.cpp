@@ -4,6 +4,10 @@
 FragTrap::FragTrap()
 {
 	std::cout << "default frag constructor invoked" << std::endl;
+	this->name = "";
+	this->AttackDamage = 100;
+	this->HealthPoints = 100;
+	this->EnergyPoints = 30;
 }
 
 FragTrap::FragTrap(std::string name)
@@ -13,6 +17,12 @@ FragTrap::FragTrap(std::string name)
 	this->setHealth(100);
 	this->setAttack(30);
 	std::cout << "string constructor called on frag" << std::endl; 
+}
+
+FragTrap::FragTrap(const FragTrap &frag)
+{
+	*this = frag;
+	std::cout << "copy constructor called on frag" << std::endl;
 }
 
 FragTrap &FragTrap::operator=(FragTrap const &frag)
